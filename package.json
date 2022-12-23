@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "sucrase-node src/index.ts",
+    "dev": "nodemon src/server.ts",
     "build": ""
   },
   "author": "Miguel S. Ramos",
