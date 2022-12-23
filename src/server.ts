@@ -1,4 +1,4 @@
-import app from './src/app';
+import app from './app';
 const port = process.env.port || 8089;
 
 app.listen(port, () => {
