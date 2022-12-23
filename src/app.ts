@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import index from './routes/index';
+import routes from './routes/routes';
 
 class App {
   public express: express.Application;
@@ -33,6 +34,7 @@ class App {
   private routes():void {
     // ==> Rotas da API:
     this.express.use(index);
+    this.express.use('/api/v1', routes);
   }
 }
 
