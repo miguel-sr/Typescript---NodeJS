@@ -2,6 +2,6 @@
   "watch": ["src"],
   "ext": "ts",
   "execMap": {
-    "ts": "npx eslint . && sucrase-node server.ts"
+    "ts": "npx eslint . && sucrase-node src/server.ts"
   }
 }
