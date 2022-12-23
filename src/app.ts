@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import index from './routes/index';
 
 class App {
   public express: express.Application;
@@ -30,13 +31,8 @@ class App {
   }
 
   private routes():void {
-    this.express.get('/api/v1', (req, res) => {
-      res.status(200).send({
-        success: true,
-        message: 'Seja bem vindo (a) a API!',
-        version: '1.0.0'
-      });
-    });
+    // ==> Rotas da API:
+    this.express.use(index);
   }
 }
 
