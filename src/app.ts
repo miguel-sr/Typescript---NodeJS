@@ -15,7 +15,9 @@ class App {
   }
 
   private middlewares():void {
+    this.express.use(express.urlencoded({extended: true}));
     this.express.use(express.json());
+    this.express.use(express.json({type: "application/vnd.api+json"}));
     this.express.use(cors());
   }
 
